@@ -31,7 +31,6 @@ export default function Hero() {
             </div>
 
             <div className="mx-auto flex min-h-screen items-center max-w-[1400px] px-8 pt-24 lg:px-12 lg:pt-28 xl:px-16">
-                {/* <div className="grid w-full items-center gap-16 lg:grid-cols-[1.25fr_0.75fr]"> */}
                 <div className="grid w-full items-center gap-24 lg:grid-cols-[1fr_0.9fr]">
                     <div>
                         <motion.div
