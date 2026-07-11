@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vamsi Chilukuri
 
-## Getting Started
+> Senior Full Stack Developer • Building Enterprise Software • AI • Cloud-Native Applications
 
-First, run the development server:
+A modern, high-performance portfolio showcasing my experience, technical expertise, featured projects, and engineering journey. Built with a strong focus on performance, accessibility, scalability, and clean design.
+
+---
+
+## 🌐 Live Demo
+
+**Portfolio:** *(Coming Soon)*
+
+---
+
+## ✨ Features
+
+- Modern responsive UI
+- Premium dark theme
+- Smooth animations with Framer Motion
+- SEO optimized
+- Open Graph & Twitter metadata
+- Recognition & Awards
+- Enterprise project showcase
+- Resume download
+- Fully responsive
+- Accessible semantic HTML
+- Optimized for Lighthouse performance
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Framework | Next.js 16 |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Animation | Framer Motion |
+| Icons | Lucide React |
+| Deployment | Netlify |
+
+---
+
+## 📂 Project Structure
+
+```text
+app/
+components/
+public/
+```
+
+---
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/vamsichilukuri/portfolio.git
+```
+
+### Navigate to the project
+
+```bash
+cd portfolio
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📦 Production Build
 
-To learn more about Next.js, take a look at the following resources:
+Build the application:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run the production server:
 
-## Deploy on Vercel
+```bash
+npm run start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 Project Highlights
+
+- Enterprise-grade UI architecture
+- AI-focused featured projects
+- Responsive across desktop, tablet, and mobile
+- Semantic HTML for accessibility & SEO
+- Optimized metadata and Open Graph support
+- Smooth animations with Framer Motion
+- Professional recognition & awards section
+- Clean, maintainable component architecture
+
+---
+
+## 📫 Connect With Me
+
+- **Portfolio:** *(Coming Soon)*
+- **LinkedIn:** https://linkedin.com/in/vamsi-chilukuri-897b15197
+- **GitHub:** https://github.com/vamsichilukuri
+
+---
+
+## 📄 Resume
+
+The latest version of my resume is available directly from the portfolio website.
+
+---
+
+## 📜 License
+
+This repository contains the source code for my personal portfolio.
+
+Please do not copy, redistribute, or reuse the design, branding, or content without permission.
+
+© 2026 Vamsi Chilukuri. All Rights Reserved.
