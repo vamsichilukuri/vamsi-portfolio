@@ -49,7 +49,18 @@ export const PROJECT_ARCHIVE = [
 
         href: "#",
     },
+    {
+        title: "Cloud Native Deployment Lab",
+        category: "Cloud & DevOps",
+        year: "2021",
 
+        description:
+            "Containerized frontend and backend applications, configured Kubernetes deployments and explored production-ready cloud-native deployment patterns.",
+
+        technologies: ["Docker", "Kubernetes", "NGINX", "Linux"],
+
+        href: "#",
+    },
     {
         title: "AI PM Agent",
         category: "AI Engineering",
@@ -62,20 +73,6 @@ export const PROJECT_ARCHIVE = [
 
         href: "#",
     },
-
-    {
-        title: "Cloud Native Deployment Lab",
-        category: "Cloud & DevOps",
-        year: "2025",
-
-        description:
-            "Containerized frontend and backend applications, configured Kubernetes deployments and explored production-ready cloud-native deployment patterns.",
-
-        technologies: ["Docker", "Kubernetes", "NGINX", "Linux"],
-
-        href: "#",
-    },
-
     {
         title: "Semantic AI Cache",
         category: "AI Infrastructure",

@@ -53,9 +53,11 @@ export default function Hero() {
                         >
                             Building
                             <br />
-                            software that
+                            the future of
                             <br />
-                            <span className="text-zinc-400">matters.</span>
+                            <span className="text-zinc-400">
+                                enterprise software
+                            </span>
                         </motion.h1>
 
                         <motion.p
@@ -69,11 +71,12 @@ export default function Hero() {
                             <span className="font-semibold text-white">
                                 Vamsi Chilukuri
                             </span>
-                            , a Senior Full Stack Developer with 6+ years of
-                            experience building enterprise software. Passionate
-                            about AI, cloud-native engineering, and creating
-                            scalable products that solve real-world business
-                            problems.
+                            , a Senior Full Stack Developer with experience
+                            building enterprise platforms, cloud-native
+                            applications, and AI-powered solutions. I focus on
+                            creating scalable software that solves real business
+                            problems with clean architecture and modern
+                            engineering practices.
                             {/* , a Senior Frontend Engineer with 6+ years of
                             experience building enterprise applications and
                             modern AI-powered products with a strong focus on

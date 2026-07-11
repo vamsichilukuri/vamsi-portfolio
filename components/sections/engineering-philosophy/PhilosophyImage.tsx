@@ -44,11 +44,9 @@ export default function PhilosophyImage() {
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-center transition-all duration-300 hover:border-white/20 hover:bg-white/[0.05]">
-                    <p className="text-xl font-semibold text-white">
-                        Continuous
-                    </p>
+                    <p className="text-xl font-semibold text-white">Growth</p>
                     <p className="mt-2 text-xs uppercase tracking-[0.25em] text-zinc-500">
-                        Learning
+                        Mindset
                     </p>
                 </div>
             </div>

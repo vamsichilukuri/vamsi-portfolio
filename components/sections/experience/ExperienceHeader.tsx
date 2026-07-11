@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
+
 import { motion, Variants } from "framer-motion";
+
 const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const fadeUp: Variants = {
@@ -32,20 +34,28 @@ export default function ExperienceHeader() {
             </p>
 
             <h2 className="text-5xl font-black leading-[1] tracking-[-0.05em] text-white md:text-6xl">
-                Building enterprise software
+                A journey of building
                 <br />
                 <span className="text-zinc-400">
-                    that powers financial services.
+                    enterprise software at scale.
                 </span>
             </h2>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-                For the past{" "}
-                <span className="font-semibold text-white">6+ years</span> I've
-                been building scalable enterprise platforms across
-                authentication, administration, configurable systems, reporting,
-                monitoring and modern frontend architecture for financial
-                services.
+                Since beginning my professional journey in{" "}
+                <span className="font-semibold text-white">July 2020</span>,
+                I've progressed from{" "}
+                <span className="font-semibold text-white">
+                    Junior Fullstack Developer
+                </span>{" "}
+                to{" "}
+                <span className="font-semibold text-white">
+                    Senior Software Developer
+                </span>
+                , delivering enterprise-grade solutions across authentication,
+                configurable platforms, administration systems, reporting, and
+                modern full-stack architecture for the financial services
+                industry.
             </p>
         </motion.div>
     );
