@@ -6,28 +6,8 @@ import { ArrowUpRight } from "lucide-react";
 
 import logo from "@/public/images/logo-bw.png";
 
-const NAV_ITEMS = [
-    {
-        label: "About",
-        href: "#about",
-    },
-    {
-        label: "Experience",
-        href: "#experience",
-    },
-    {
-        label: "Projects",
-        href: "#projects",
-    },
-    {
-        label: "Recognition",
-        href: "#recognition",
-    },
-    {
-        label: "Contact",
-        href: "#contact",
-    },
-];
+import { NAV_ITEMS } from "@/components/navigation/nav-items";
+import MobileMenu from "@/components/navigation/MobileMenu";
 
 export default function Navbar() {
     return (
@@ -79,68 +59,38 @@ export default function Navbar() {
                 </Link>
 
                 {/* Navigation */}
+                {/* Desktop Navigation */}
 
-                <div className="hidden items-center gap-10 md:flex">
+                <div className="hidden items-center gap-12 md:flex">
                     {NAV_ITEMS.map((item) => (
                         <Link
                             key={item.href}
                             href={item.href}
-                            className="group relative text-sm font-medium text-zinc-400 transition-colors duration-300 hover:text-white"
+                            className="relative text-sm text-zinc-400 transition duration-300 hover:text-white"
                         >
                             {item.label}
-
-                            <span
-                                className="
-                                    absolute
-                                    -bottom-2
-                                    left-1/2
-                                    h-[2px]
-                                    w-0
-                                    -translate-x-1/2
-                                    rounded-full
-                                    bg-white
-                                    transition-all
-                                    duration-300
-                                    group-hover:w-full
-                                "
-                            />
                         </Link>
                     ))}
                 </div>
 
-                {/* Resume */}
+                {/* Right Side */}
 
-                <a
-                    href="/resume/Vamsi_Chilukuri_Sr_Fullstack_Dev_Resume.pdf"
-                    download
-                    className="
-                        hidden
-                        items-center
-                        gap-2
-                        rounded-full
-                        border
-                        border-white/10
-                        bg-white/5
-                        px-5
-                        py-3
-                        text-sm
-                        font-medium
-                        text-white
-                        transition-all
-                        duration-300
-                        hover:-translate-y-0.5
-                        hover:border-white/20
-                        hover:bg-white/10
-                        hover:shadow-lg
-                        md:flex
-                    "
-                >
-                    Resume
-                    <ArrowUpRight
-                        size={16}
-                        className="transition-transform duration-300 group-hover:translate-x-1"
-                    />
-                </a>
+                <div className="flex items-center gap-3">
+                    {/* Desktop Resume */}
+
+                    <a
+                        href="/resume/Vamsi_Chilukuri_Sr_Fullstack_Dev_Resume.pdf"
+                        download
+                        className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm text-white transition hover:border-white/20 hover:bg-white/10 md:flex"
+                    >
+                        Resume
+                        <ArrowUpRight size={16} />
+                    </a>
+
+                    {/* Mobile Navigation */}
+
+                    <MobileMenu />
+                </div>
             </nav>
         </header>
     );

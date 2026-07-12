@@ -46,8 +46,15 @@ export const metadata: Metadata = {
 
     publisher: "Vamsi Chilukuri",
 
+    applicationName: "Vamsi Portfolio",
+
+    category: "technology",
+
+    manifest: "/manifest.webmanifest",
+
     openGraph: {
         title: "Vamsi Chilukuri | Senior Full Stack Developer",
+
         description:
             "Building enterprise software, AI products and scalable cloud-native applications.",
 
@@ -64,6 +71,7 @@ export const metadata: Metadata = {
                 url: "/og-image.jpg",
                 width: 1200,
                 height: 630,
+                alt: "Vamsi Chilukuri Portfolio",
             },
         ],
     },
@@ -82,10 +90,50 @@ export const metadata: Metadata = {
     robots: {
         index: true,
         follow: true,
+
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
     },
 
+    themeColor: "#09090B",
+
     icons: {
-        icon: "/favicon.ico",
+        icon: [
+            {
+                url: "/favicon.ico",
+            },
+            {
+                url: "/icons/icon-192.png",
+                sizes: "192x192",
+                type: "image/png",
+            },
+            {
+                url: "/icons/icon-512.png",
+                sizes: "512x512",
+                type: "image/png",
+            },
+        ],
+
+        apple: [
+            {
+                url: "/apple-icon.png",
+                sizes: "180x180",
+                type: "image/png",
+            },
+        ],
+
+        shortcut: "/favicon.ico",
+    },
+
+    appleWebApp: {
+        capable: true,
+        statusBarStyle: "black-translucent",
+        title: "Vamsi",
     },
 };
 
@@ -97,9 +145,12 @@ export default function RootLayout({
     return (
         <html
             lang="en"
+            suppressHydrationWarning
             className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
         >
-            <body className="min-h-full flex flex-col">{children}</body>
+            <body suppressHydrationWarning className="min-h-full flex flex-col">
+                {children}
+            </body>
         </html>
     );
 }
