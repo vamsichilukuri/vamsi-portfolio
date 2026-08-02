@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 
 // import heroImage from "@/public/images/hero-removebg-preview.png";
@@ -24,10 +24,11 @@ const fadeUp = {
 };
 
 export default function Hero() {
+    const shouldReduceMotion = useReducedMotion();
     return (
         <section id="home" className="relative overflow-hidden bg-[#09090B]">
             <div className="absolute inset-0 -z-10">
-                <div className="absolute left-1/2 top-[-220px] h-[850px] w-[850px] -translate-x-1/2 rounded-full bg-white/[0.025] blur-[180px]" />
+                <div className="absolute left-1/2 top-[-220px] h-[850px] w-[850px] -translate-x-1/2 rounded-full bg-white/[0.025] blur-[80px]" />
             </div>
 
             <div className="mx-auto flex min-h-screen items-center max-w-[1400px] px-8 pt-24 lg:px-12 lg:pt-28 xl:px-16">
@@ -35,7 +36,7 @@ export default function Hero() {
                     <div>
                         <motion.div
                             variants={fadeUp}
-                            initial="hidden"
+                            initial={shouldReduceMotion ? false : "hidden"}
                             animate="visible"
                             custom={0}
                             className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/70 px-5 py-2.5 text-sm text-zinc-300 backdrop-blur"
@@ -154,17 +155,11 @@ export default function Hero() {
                     >
                         {/* Large background glow */}
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                            <div className="h-[750px] w-[750px] rounded-full bg-white/[0.03] blur-[150px]" />
+                            <div className="h-187.5 w-187.5 rounded-full bg-white/3 blur-3xl" />
                         </div>
 
                         {/* Floating portrait */}
                         <motion.div
-                            animate={{ y: [0, -8, 0] }}
-                            transition={{
-                                duration: 6,
-                                repeat: Infinity,
-                                ease: "easeInOut",
-                            }}
                             whileHover={{
                                 y: -4,
                                 scale: 1.02,
@@ -172,11 +167,21 @@ export default function Hero() {
                             className="relative z-10"
                         >
                             <figure>
-                                <Image
+                                {/* <Image
                                     src={heroImage}
                                     alt="Vamsi Chilukuri - Senior Full Stack Developer"
                                     priority
                                     className="relative z-10 w-[560px] xl:w-[650px] object-contain select-none pointer-events-none [mask-image:radial-gradient(ellipse_at_center,black_60%,rgba(0,0,0,0.96)_75%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_60%,rgba(0,0,0,0.96)_75%,transparent_100%)]"
+                                /> */}
+                                <Image
+                                    src={heroImage}
+                                    alt="Vamsi Chilukuri - Senior Full Stack Developer"
+                                    priority
+                                    quality={85}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 650px"
+                                    className="relative z-10 w-[560px] xl:w-[650px] object-contain select-none pointer-events-none 
+                                    [mask-image:radial-gradient(ellipse_at_center,black_60%,rgba(0,0,0,0.96)_75%,transparent_100%)] 
+                                    [-webkit-mask-image:radial-gradient(ellipse_at_center,black_60%,rgba(0,0,0,0.96)_75%,transparent_100%)]"
                                 />
                             </figure>
 
@@ -193,13 +198,9 @@ export default function Hero() {
                 </div>
             </div>
 
-            <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 text-zinc-500"
-            >
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-zinc-500">
                 ↓
-            </motion.div>
+            </div>
         </section>
     );
 }

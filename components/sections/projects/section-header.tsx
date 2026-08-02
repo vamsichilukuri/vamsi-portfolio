@@ -1,14 +1,19 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export default function SectionHeader() {
+    const shouldReduceMotion = useReducedMotion();
+
     return (
         <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{
+                duration: 0.45,
+                ease: "easeOut",
+            }}
             className="max-w-3xl"
         >
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-zinc-500">

@@ -6,11 +6,14 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
+import { useActiveSection } from "@/hooks/useActiveSection";
+
 import logo from "@/public/images/logo-bw.png";
 import { NAV_ITEMS } from "./nav-items";
 
 export default function MobileMenu() {
     const [isOpen, setIsOpen] = useState(false);
+    const { activeSection, setActiveSection } = useActiveSection();
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? "hidden" : "";
@@ -25,7 +28,6 @@ export default function MobileMenu() {
     return (
         <>
             {/* Menu Button */}
-
             <button
                 onClick={() => setIsOpen(true)}
                 aria-label="Open navigation menu"
@@ -115,8 +117,18 @@ export default function MobileMenu() {
                                     >
                                         <Link
                                             href={item.href}
-                                            onClick={closeMenu}
-                                            className="block rounded-xl px-4 py-4 text-lg font-medium text-zinc-300 transition hover:bg-white/5 hover:text-white"
+                                            onClick={() => {
+                                                setActiveSection(
+                                                    item.href.slice(1),
+                                                );
+                                                closeMenu();
+                                            }}
+                                            className={`block rounded-xl px-4 py-4 text-lg font-medium transition-all duration-300 ${
+                                                activeSection ===
+                                                item.href.slice(1)
+                                                    ? "bg-white/10 text-white"
+                                                    : "text-zinc-300 hover:bg-white/5 hover:text-white"
+                                            }`}
                                         >
                                             {item.label}
                                         </Link>

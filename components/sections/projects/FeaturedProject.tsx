@@ -1,17 +1,23 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { FEATURED_PROJECT } from "./project-data";
 
 export default function FeaturedProject() {
+    const shouldReduceMotion = useReducedMotion();
+
     return (
         <motion.article
-            initial={{ opacity: 0, y: 30 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            whileHover={{ y: -4 }}
-            className="mt-20 overflow-hidden rounded-[32px] border border-white/5 bg-white/[0.02]"
+            transition={{
+                duration: 0.45,
+                ease: "easeOut",
+            }}
+            // whileHover={{ y: -4 }}
+            // className="mt-20 overflow-hidden rounded-[32px] border border-white/5 bg-white/[0.02]"
+            className="mt-20 overflow-hidden rounded-[32px] border border-white/5 bg-white/[0.02] transition-transform duration-300 hover:-translate-y-1"
         >
             <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
                 {/* LEFT */}

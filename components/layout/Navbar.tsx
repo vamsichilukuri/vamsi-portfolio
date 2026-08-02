@@ -4,12 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
+import { useActiveSection } from "@/hooks/useActiveSection";
+
 import logo from "@/public/images/logo-bw.png";
 
 import { NAV_ITEMS } from "@/components/navigation/nav-items";
 import MobileMenu from "@/components/navigation/MobileMenu";
 
 export default function Navbar() {
+    const { activeSection } = useActiveSection();
+
     return (
         <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-[#09090B]/95 backdrop-blur-md">
             <nav
@@ -66,9 +70,21 @@ export default function Navbar() {
                         <Link
                             key={item.href}
                             href={item.href}
-                            className="relative text-sm text-zinc-400 transition duration-300 hover:text-white"
+                            className={`relative pb-1 text-sm transition-all duration-300 ${
+                                activeSection === item.href.slice(1)
+                                    ? "text-white"
+                                    : "text-zinc-400 hover:text-white"
+                            }`}
                         >
                             {item.label}
+
+                            <span
+                                className={`absolute bottom-0 left-0 h-[2px] rounded-full bg-white transition-all duration-300 ${
+                                    activeSection === item.href.slice(1)
+                                        ? "w-full"
+                                        : "w-0"
+                                }`}
+                            />
                         </Link>
                     ))}
                 </div>
