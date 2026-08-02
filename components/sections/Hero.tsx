@@ -177,7 +177,6 @@ export default function Hero() {
                                     src={heroImage}
                                     alt="Vamsi Chilukuri - Senior Full Stack Developer"
                                     priority
-                                    quality={85}
                                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 650px"
                                     className="relative z-10 w-[560px] xl:w-[650px] object-contain select-none pointer-events-none 
                                     [mask-image:radial-gradient(ellipse_at_center,black_60%,rgba(0,0,0,0.96)_75%,transparent_100%)] 

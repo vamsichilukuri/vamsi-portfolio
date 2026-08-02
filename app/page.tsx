@@ -13,8 +13,8 @@ export default function Home() {
             <Navbar />
             <main className="bg-[#09090B] text-white">
                 <Hero />
-                <Experience />
                 <Projects />
+                <Experience />
                 <Skills />
                 <EngineeringPhilosophy />
                 <Recognition />
